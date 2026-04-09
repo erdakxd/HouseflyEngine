@@ -1,0 +1,1 @@
+If you want to open engine, enter in terminal "python run.py" and foler localization should be "Housefly".

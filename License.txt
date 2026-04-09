@@ -1,0 +1,53 @@
+**HOUSEFLY ENGINE LICENSE (Source-Available License)**
+
+"Author" refers to Erdak, a pseudonym of the creator of this software.
+
+Copyright (c) 2026 Erdak
+
+All rights reserved.
+
+"Erdak" is a pseudonym used by the Author and serves as the official author name for this work.
+
+### 1. Ownership and Name
+
+The name "Housefly" and all associated branding are exclusively reserved for the original engine developed by the Author.
+You may not use the name "Housefly" for any modified version, fork, or derivative of the engine, nor for any project that may imply official association with the original engine.
+
+### 2. Grant of Use
+
+You are granted a free, non-exclusive, worldwide license to use the Housefly game engine for any purpose, including the development of commercial games.
+
+### 3. Modification
+
+You are permitted to view, study, and modify the source code of the engine for personal or internal use.
+
+### 4. Restrictions
+
+You may NOT:
+
+* Redistribute the engine, whether modified or unmodified
+* Publish or share modified versions of the engine
+* Rebrand, rename, or distribute the engine under a different name
+* Create or distribute any derivative game engine based on the Housefly engine
+
+### 5. Commercial Use
+
+Games created using the Housefly engine:
+
+* May be used for commercial purposes
+* May be sold without restriction
+* Are not subject to royalties, fees, or revenue sharing
+
+### 6. Fees
+
+The engine is provided free of charge.
+No subscription fees, licensing fees, or royalties are required for its use or for the distribution of games created with it.
+
+### 7. Disclaimer
+
+This software is provided "as is", without warranty of any kind, express or implied.
+In no event shall the Author be liable for any claim, damages, or other liability arising from the use of the software.
+
+--------------------------------------------------------------------------------------------
+
+By using this software, you agree to the terms of this license.
