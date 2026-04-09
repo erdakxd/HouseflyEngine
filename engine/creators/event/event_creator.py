@@ -19,8 +19,8 @@ class EventCreator():
         self.data = data
         self.logic = logic
 
-    def set_sprite(self):
-        print(self.data['2. Grzesiek']['symbol'])
+    def set_sprite(self, character):
+        print(self.data[character]['symbol'])
 
     def movement(self):
         pass
@@ -33,7 +33,9 @@ def main():
     data = export(PLAYER_PATH)
     player = EventCreator(data, '')
 
-    player.set_sprite()
+    print([character for character in player.data])
+    character = get_command("Enter character.\n")
+    player.set_sprite(character)
 
 if __name__ == '__main__':
     main()
