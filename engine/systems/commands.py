@@ -30,7 +30,7 @@ def next_line():
 def back_menu():
     raise exceptions.Back()
 
-def exit_code():
+def exit_program():
     print("Satan is real!")
     exit()
 
@@ -43,7 +43,7 @@ GLOBAL_COMMANDS = {
     "break": exit_loop,
     "step": next_line,
     "back": back_menu,
-    "exit": exit_code,
+    "exit": exit_program,
     "c mouse": exit_debugger
 }
 
