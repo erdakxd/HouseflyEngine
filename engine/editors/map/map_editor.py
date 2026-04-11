@@ -27,7 +27,7 @@ class Structures:
         pass
     
 repeat = True
-layer = '1'
+layer = '2'
 tool = "POINTER"
 
 wall = "X"
@@ -112,7 +112,6 @@ def main():
     game_map = load_map()
     event = load_event()
     repeat = True
-    layer = '2'
     tool = "POINTER"
 
     wall = "X"
