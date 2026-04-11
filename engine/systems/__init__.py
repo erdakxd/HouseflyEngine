@@ -1,1 +1,3 @@
-__all__ = ['commands', 'genera_systems']
+__all__ = ['commands', 'general_systems', 'player_logic', 'ai_logic', 'condition_logic', ]
+
+from . import player_logic
