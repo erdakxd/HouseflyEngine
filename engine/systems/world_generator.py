@@ -4,7 +4,7 @@ import random
 from engine.systems.commands import get_command
 import engine.creators.map.tools as tools
 
-with open("engine\data\char\players.json", "r", encoding="utf-8") as file:
+with open("engine\data\players\players.json", "r", encoding="utf-8") as file:
     characters = json.load(file)
 
 # GENERAL
@@ -16,7 +16,7 @@ y = 0
 x = 0
 
 # LAYER 2
-player = characters['1. Erdak']['symbol']
+player = characters['1. Monkey']['symbol']
 player_y = -1
 player_x = -1
 player_vision = 45

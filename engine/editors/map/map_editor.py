@@ -6,6 +6,7 @@ from ...creators.map import tools
 import engine.utils.terminal as terminal
 
 MAP_PATH = "engine/data/map/game_map.json"
+EVENT_PATH = "engine/data/event_test.json"
 
 def load_map():
     if not os.path.exists(MAP_PATH):
@@ -14,6 +15,13 @@ def load_map():
     with open(MAP_PATH, "r") as f:
         return json.load(f)
 
+def load_event():
+    if not os.path.exists(EVENT_PATH):
+        raise NoJsonFile()
+    
+    with open(EVENT_PATH, "r") as f:
+        return json.load(f)
+    
 class Structures:
     def __init__(self):
         pass
@@ -73,14 +81,38 @@ def set_tool():
 def edit_map():
     pass 
 
+def put_event(event, len_map_y, len_map_x, game_map):
+    while True:
+        print([e for e in event])
+        choose = get_command("Choose event.\n")
+        if choose in event:
+            choose = event[choose]
+            terminal.clear()
+
+            for map_y in range(0, len_map_y):
+                for map_x in range(0, len_map_x):
+                    print(game_map[layer][map_y][map_x], end=" ")
+                print()
+
+            print([c for c in choose])
+            tools.pointer.y = tools.pointer.get_position('y', len_map_y)
+            tools.pointer.x = tools.pointer.get_position('x', len_map_x)
+            tools.pointer.place(game_map[layer], choose['Data']['symbol'])
+
+        return
+
 def get_export():
     pass
 
+# ************
+# *** MAIN ***
+# ************
 
 def main():
     game_map = load_map()
+    event = load_event()
     repeat = True
-    layer = '1'
+    layer = '2'
     tool = "POINTER"
 
     wall = "X"
@@ -125,7 +157,7 @@ def main():
 
     # --- EDITING LAYER ---
     while True:
-        os.system("clear||cls")
+        terminal.clear()
         if not tool in ("", "POINTER", "LINER", "SQUARE"):
             print("Wrong Tool. You can choose only: Pointer, Liner, Square.\n")
             tool = ""
@@ -178,6 +210,8 @@ def main():
                         pass
                     case 'N' | 'NO':
                         break
+
+    put_event(event, len_map_y, len_map_x, game_map)
 
     # *****************
     # *** EXPORTING ***
