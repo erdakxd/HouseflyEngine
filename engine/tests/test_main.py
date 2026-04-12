@@ -6,6 +6,7 @@ from engine.systems.commands import get_command
 
 GAME_MAP = "engine\data\map\game_map.json"
 
+LAYERS = []
 RENDER = []
 
 def load_map(path):
@@ -17,29 +18,40 @@ def load_map(path):
 # ************
 
 def main():
+    
+    # --- PUTTING JSON MAP TO LAYERS LIST ---
     game_map = load_map(GAME_MAP)
     z = 0
 
     for layer, value in game_map.items():
         y = 0
 
-        RENDER.append([])
-        for row in value:
-            RENDER[z].append([])
-            for column in row:
-                if column == '0':
-                    RENDER[z][y].append('O')
+        LAYERS.append([])
+        for column in value:
+            LAYERS[z].append([])
+            for row in column:
+                if row == '0':
+                    LAYERS[z][y].append('0')
                 else:
-                    RENDER[z][y].append(column)
+                    LAYERS[z][y].append(row)
             y += 1
         z += 1
-        
+
+    # --- MIXING ALL LAYERS ---
+    for layer in LAYERS:
+        y = 0
+
+        for column in layer:
+            for row in column:
+                
+                RENDER[y].append(row)
+            y += 1
+
     
-    for z in RENDER:
-        for y in z:
-            for x in y:
-                print(x, end=' ')
-            print()
+    # --- RENDERING MAP ---
+    for y in RENDER:
+        for x in y:
+            print(x, end=' ')
         print()
     
 
