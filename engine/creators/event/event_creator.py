@@ -40,7 +40,7 @@ class EventCreator():
         data = {}
 
         data[f"{1}. {self.data['name']}"] = {"Data": self.data,
-                                                 "Logic": self.logic}
+                                             "Logic": self.logic}
 
         with open(file=file_path, mode="w") as file:
             json.dump(data, file, indent=4)

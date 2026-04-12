@@ -18,6 +18,7 @@ class Char:
         return {
             'name': self.name,
             'id': self.id,
+            'priority': self.priority,
             'y': self.y,
             'x': self.x,
             'symbol': self.symbol,
@@ -31,6 +32,7 @@ class Player(Char):
         super().__init__()
 
         self.name = name
+        self.priority = 1
         self.y = 0
         self.x = 0
         self.symbol = symbol
@@ -50,6 +52,7 @@ class Enemy(Char):
         super().__init__()
 
         self.name = name
+        self.priority = 1
         self.y = 0
         self.x = 0
         self.symbol = symbol
