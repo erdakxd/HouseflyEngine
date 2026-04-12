@@ -37,15 +37,28 @@ def main():
             y += 1
         z += 1
 
+    z = 0
     # --- MIXING ALL LAYERS ---
     for layer in LAYERS:
         y = 0
 
         for column in layer:
+            x = 0
+            RENDER.append([])
+
             for row in column:
-                
-                RENDER[y].append(row)
+                if x == len(RENDER[y]):
+                    RENDER[y].append(row)
+                else:
+                    if LAYERS[z][y][x] == '0' and RENDER[y][x] != '0':
+                        x += 1
+                        continue
+                    else:
+                        RENDER[y][x] = row
+
+                x += 1
             y += 1
+        z += 1
 
     
     # --- RENDERING MAP ---
