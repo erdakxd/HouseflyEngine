@@ -1,0 +1,18 @@
+*** 0.1.1 ***
+### Added
+    - Entities
+    - Test Game
+    - Rendering Map
+    - Player Logic
+
+### Changed
+    - License
+    - Character Creator
+
+### Notes
+    - New added elements are still buggy and are not finished
+    - Character Creator has now for a character template 'priority'. This data is for entities visibility.
+
+*** 0.1.0 ***
+### Added
+    - HouseflyEngine Project
